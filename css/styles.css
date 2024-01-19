@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background: #424242;
+  color: #fff;
+  overflow-x: hidden !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  padding: 5% 20%;
+}
+
+.hero {
+  background: url(../assets/netflixBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+  padding-top: 1%;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.736);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.hero .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  margin-bottom: 10rem;
+}
+
+.hero .navbar h1 {
+  color: #d70404;
+  font-size: 3rem;
+}
+
+.hero .navbar a {
+  color: #fff;
+  font-size: 1rem;
+  background: #dc0000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero .navbar a:hover {
+  background-color: #d70404;
+}
+
+.main {
+  line-height: 2;
+  margin-bottom: 8rem;
+}
+
+.main h1 {
+  font-size: 3rem;
+}
+
+.main p {
+  font-size: 1.5rem;
+}
+
+.main .input input {
+  margin-top: 1rem;
+}
+
+.main .input input {
+  background: #1b1b1b;
+  border: 1px solid #a3a3a3;
+  border-radius: 3px;
+  color: #fff;
+  padding: 20px;
+  margin-right: 1rem;
+  width: 400px;
+}
+
+.main .input input:focus {
+  outline: 2px solid #fff;
+}
+
+.main .input input::placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.main .input button {
+  background: #dc0000;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.enjoy {
+  background: #000;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.enjoy .display {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enjoy .text h2 {
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+
+.enjoy .text p {
+  font-size: 1.4rem;
+}
+
+.faq {
+  background: #000;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.faq h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.faq-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.accordion {
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #000;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.accordion-header {
+  background-color: #424242;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.accordion-panel {
+  display: none;
+  padding: 25px;
+  text-align: left;
+  font-size: 1.5rem;
+  background-color: #2d2d2d;
+  border-top: 1px solid #000;
+}
+
+.accordion-item.active .accordion-panel {
+  display: block;
+}
+
+.faq p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.faq .input input {
+  margin-top: 1rem;
+}
+
+.faq .input input {
+  background: #1b1b1b;
+  border: 1px solid #a3a3a3;
+  border-radius: 3px;
+  color: #fff;
+  padding: 20px;
+  margin-right: 1rem;
+  width: 400px;
+}
+
+.faq .input input:focus {
+  outline: 2px solid #fff;
+}
+
+.faq .input input::placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.faq .input button {
+  background: #dc0000;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.contact {
+  background: #000;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+
+.contact a {
+  color: gray;
+  text-decoration: underline;
+  padding: 10px 0;
+}
+
+.contact p {
+  color: gray;
+  text-decoration: underline;
+  padding: 10px 0;
+}
+
+.contact .links {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* Styles for screens with a minimum width of 901px */
+@media screen and (min-width: 901px) {
+  section {
+    padding: 5% 5%;
+  }
+
+  .enjoy .display img {
+    width: 474px;
+    height: auto;
+  }
+}
+
+/* Styles for screens with a minimum width of 601px and a maximum width of 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  section {
+    padding: 5% 4%;
+  }
+
+  .hero .navbar h1 {
+    font-size: 2rem;
+  }
+
+  .hero .navbar a {
+    font-size: 0.75rem;
+  }
+
+  .main h1 {
+    font-size: 2.1rem;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+
+  .enjoy {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+  }
+
+  .enjoy .text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .enjoy .text p {
+    font-size: 1.1rem;
+  }
+
+  .enjoy .display {
+    width: 50%;
+    order: 2;
+  }
+
+  .faq h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .accordion-header {
+    font-size: 1.2rem;
+  }
+
+  .faq p {
+    font-size: 1rem;
+  }
+
+  .contact .links {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* Styles for screens with a maximum width of 600px */
+@media screen and (max-width: 600px) {
+  section {
+    padding: 5% 4%;
+  }
+
+  .hero .navbar {
+    margin-bottom: 2rem;
+  }
+
+  .main {
+    margin-bottom: 2rem;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .main .input input {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .main .input button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+  }
+
+  .enjoy {
+    line-height: 1.5;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 10px;
+  }
+
+  .enjoy .text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .enjoy .text p {
+    font-size: 1.1rem;
+  }
+
+  .enjoy .display {
+    width: 50%;
+    order: 2;
+  }
+
+  .enjoy .display img {
+    max-width: 300px;
+  }
+
+  .faq h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .accordion-header {
+    font-size: 1.2rem;
+  }
+
+  .faq p {
+    font-size: 1rem;
+  }
+
+  .faq .input input {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .faq .input button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .contact .links {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
